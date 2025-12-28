@@ -42,6 +42,7 @@ PRIVATE
 	${OpenCV_INCLUDE_DIRS}
   ${dlib_INCLUDE_DIRS}
 	${PROJECT_SOURCE_DIR}/src
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 target_link_libraries(face

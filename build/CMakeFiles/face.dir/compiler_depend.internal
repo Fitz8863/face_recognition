@@ -3,14 +3,25 @@
 
 CMakeFiles/face.dir/main.cc.o
  /home/fitz/projects/face/opencv_face_recognition/main.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/FaceRecognizer.h
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /usr/include/alloca.h
+ /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/int-ll64.h
+ /usr/include/asm-generic/posix_types.h
+ /usr/include/asm-generic/types.h
  /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
@@ -73,6 +84,8 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -84,6 +97,7 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
  /usr/include/c++/13/bits/std_mutex.h
+ /usr/include/c++/13/bits/std_thread.h
  /usr/include/c++/13/bits/stl_algo.h
  /usr/include/c++/13/bits/stl_algobase.h
  /usr/include/c++/13/bits/stl_bvector.h
@@ -98,6 +112,7 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/bits/stl_map.h
  /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_multiset.h
+ /usr/include/c++/13/bits/stl_numeric.h
  /usr/include/c++/13/bits/stl_pair.h
  /usr/include/c++/13/bits/stl_queue.h
  /usr/include/c++/13/bits/stl_raw_storage_iter.h
@@ -107,10 +122,12 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/stl_uninitialized.h
  /usr/include/c++/13/bits/stl_vector.h
+ /usr/include/c++/13/bits/stream_iterator.h
  /usr/include/c++/13/bits/streambuf.tcc
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/string_view.tcc
  /usr/include/c++/13/bits/stringfwd.h
+ /usr/include/c++/13/bits/this_thread_sleep.h
  /usr/include/c++/13/bits/uniform_int_dist.h
  /usr/include/c++/13/bits/unique_lock.h
  /usr/include/c++/13/bits/unique_ptr.h
@@ -119,6 +136,7 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
  /usr/include/c++/13/cfloat
@@ -156,6 +174,7 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/iosfwd
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
+ /usr/include/c++/13/iterator
  /usr/include/c++/13/limits
  /usr/include/c++/13/list
  /usr/include/c++/13/locale
@@ -164,14 +183,18 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/memory
  /usr/include/c++/13/mutex
  /usr/include/c++/13/new
+ /usr/include/c++/13/numeric
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
  /usr/include/c++/13/pstl/glue_memory_defs.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stdexcept
  /usr/include/c++/13/stdlib.h
@@ -179,6 +202,7 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
  /usr/include/c++/13/system_error
+ /usr/include/c++/13/thread
  /usr/include/c++/13/tr1/bessel_function.tcc
  /usr/include/c++/13/tr1/beta_function.tcc
  /usr/include/c++/13/tr1/ell_integral.tcc
@@ -198,14 +222,22 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/c++/13/utility
  /usr/include/c++/13/vector
  /usr/include/ctype.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/libintl.h
  /usr/include/limits.h
+ /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
+ /usr/include/linux/posix_types.h
+ /usr/include/linux/stat.h
+ /usr/include/linux/stddef.h
+ /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/math.h
  /usr/include/pthread.h
@@ -217,20 +249,33 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/time.h
+ /usr/include/unistd.h
  /usr/include/wchar.h
  /usr/include/wctype.h
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h
+ /usr/include/x86_64-linux-gnu/asm/types.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
+ /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h
  /usr/include/x86_64-linux-gnu/bits/endian.h
  /usr/include/x86_64-linux-gnu/bits/endianness.h
+ /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -241,8 +286,14 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
@@ -251,6 +302,9 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/x86_64-linux-gnu/bits/select.h
  /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
+ /usr/include/x86_64-linux-gnu/bits/stat.h
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h
+ /usr/include/x86_64-linux-gnu/bits/statx.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
@@ -265,6 +319,7 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
@@ -287,8 +342,11 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
@@ -298,6 +356,9 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
@@ -317,19 +378,25 @@ CMakeFiles/face.dir/main.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
+ /usr/include/x86_64-linux-gnu/sys/stat.h
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
@@ -447,6 +514,12 @@ CMakeFiles/face.dir/main.cc.o
 
 CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/FaceRecognizer.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/FaceRecognizer.h
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/FaceDatabase.h
@@ -529,6 +602,8 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -581,6 +656,7 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cassert
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
@@ -639,8 +715,10 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stack
  /usr/include/c++/13/stdexcept
@@ -673,8 +751,10 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/c++/13/vector
  /usr/include/ctype.h
  /usr/include/dirent.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/gif_lib.h
@@ -683,6 +763,7 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/limits.h
  /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
  /usr/include/linux/posix_types.h
  /usr/include/linux/stat.h
@@ -718,6 +799,9 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/endianness.h
  /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
@@ -725,6 +809,7 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -735,6 +820,11 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h
@@ -786,6 +876,7 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
@@ -823,11 +914,14 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
  /usr/include/x86_64-linux-gnu/sys/stat.h
@@ -1701,15 +1795,26 @@ CMakeFiles/face.dir/src/FaceRecognizer.cc.o
 
 CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/database/DlibFaceDatabase.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/DlibFaceDatabase.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/FaceDatabase.h
  /usr/include/alloca.h
+ /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/int-ll64.h
+ /usr/include/asm-generic/posix_types.h
+ /usr/include/asm-generic/types.h
  /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
@@ -1768,6 +1873,8 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -1779,6 +1886,7 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
  /usr/include/c++/13/bits/std_mutex.h
+ /usr/include/c++/13/bits/std_thread.h
  /usr/include/c++/13/bits/stl_algo.h
  /usr/include/c++/13/bits/stl_algobase.h
  /usr/include/c++/13/bits/stl_bvector.h
@@ -1793,6 +1901,7 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/bits/stl_map.h
  /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_multiset.h
+ /usr/include/c++/13/bits/stl_numeric.h
  /usr/include/c++/13/bits/stl_pair.h
  /usr/include/c++/13/bits/stl_queue.h
  /usr/include/c++/13/bits/stl_raw_storage_iter.h
@@ -1802,10 +1911,12 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/stl_uninitialized.h
  /usr/include/c++/13/bits/stl_vector.h
+ /usr/include/c++/13/bits/stream_iterator.h
  /usr/include/c++/13/bits/streambuf.tcc
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/string_view.tcc
  /usr/include/c++/13/bits/stringfwd.h
+ /usr/include/c++/13/bits/this_thread_sleep.h
  /usr/include/c++/13/bits/uniform_int_dist.h
  /usr/include/c++/13/bits/unique_lock.h
  /usr/include/c++/13/bits/unique_ptr.h
@@ -1814,6 +1925,7 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
  /usr/include/c++/13/cfloat
@@ -1849,6 +1961,7 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/iosfwd
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
+ /usr/include/c++/13/iterator
  /usr/include/c++/13/limits
  /usr/include/c++/13/list
  /usr/include/c++/13/locale
@@ -1857,14 +1970,18 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/memory
  /usr/include/c++/13/mutex
  /usr/include/c++/13/new
+ /usr/include/c++/13/numeric
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
  /usr/include/c++/13/pstl/glue_memory_defs.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stdexcept
  /usr/include/c++/13/stdlib.h
@@ -1872,6 +1989,7 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
  /usr/include/c++/13/system_error
+ /usr/include/c++/13/thread
  /usr/include/c++/13/tr1/bessel_function.tcc
  /usr/include/c++/13/tr1/beta_function.tcc
  /usr/include/c++/13/tr1/ell_integral.tcc
@@ -1891,14 +2009,22 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/c++/13/utility
  /usr/include/c++/13/vector
  /usr/include/ctype.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/libintl.h
  /usr/include/limits.h
+ /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
+ /usr/include/linux/posix_types.h
+ /usr/include/linux/stat.h
+ /usr/include/linux/stddef.h
+ /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/math.h
  /usr/include/pthread.h
@@ -1911,20 +2037,33 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/time.h
+ /usr/include/unistd.h
  /usr/include/wchar.h
  /usr/include/wctype.h
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h
+ /usr/include/x86_64-linux-gnu/asm/types.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
+ /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h
  /usr/include/x86_64-linux-gnu/bits/endian.h
  /usr/include/x86_64-linux-gnu/bits/endianness.h
+ /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -1935,8 +2074,14 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
@@ -1945,6 +2090,9 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/select.h
  /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
+ /usr/include/x86_64-linux-gnu/bits/stat.h
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h
+ /usr/include/x86_64-linux-gnu/bits/statx.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
@@ -1959,6 +2107,7 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
@@ -1981,8 +2130,11 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
@@ -1992,6 +2144,9 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
@@ -2011,19 +2166,25 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
+ /usr/include/x86_64-linux-gnu/sys/stat.h
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
@@ -2141,16 +2302,27 @@ CMakeFiles/face.dir/src/database/DlibFaceDatabase.cc.o
 
 CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/database/FaceDatabase.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/DlibFaceDatabase.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/FaceDatabase.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/OpencvFaceDatabase.h
  /usr/include/alloca.h
+ /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/int-ll64.h
+ /usr/include/asm-generic/posix_types.h
+ /usr/include/asm-generic/types.h
  /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
@@ -2209,6 +2381,8 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -2220,6 +2394,7 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
  /usr/include/c++/13/bits/std_mutex.h
+ /usr/include/c++/13/bits/std_thread.h
  /usr/include/c++/13/bits/stl_algo.h
  /usr/include/c++/13/bits/stl_algobase.h
  /usr/include/c++/13/bits/stl_bvector.h
@@ -2234,6 +2409,7 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/bits/stl_map.h
  /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_multiset.h
+ /usr/include/c++/13/bits/stl_numeric.h
  /usr/include/c++/13/bits/stl_pair.h
  /usr/include/c++/13/bits/stl_queue.h
  /usr/include/c++/13/bits/stl_raw_storage_iter.h
@@ -2243,10 +2419,12 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/stl_uninitialized.h
  /usr/include/c++/13/bits/stl_vector.h
+ /usr/include/c++/13/bits/stream_iterator.h
  /usr/include/c++/13/bits/streambuf.tcc
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/string_view.tcc
  /usr/include/c++/13/bits/stringfwd.h
+ /usr/include/c++/13/bits/this_thread_sleep.h
  /usr/include/c++/13/bits/uniform_int_dist.h
  /usr/include/c++/13/bits/unique_lock.h
  /usr/include/c++/13/bits/unique_ptr.h
@@ -2255,6 +2433,7 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
  /usr/include/c++/13/cfloat
@@ -2290,6 +2469,7 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/iosfwd
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
+ /usr/include/c++/13/iterator
  /usr/include/c++/13/limits
  /usr/include/c++/13/list
  /usr/include/c++/13/locale
@@ -2298,14 +2478,18 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/memory
  /usr/include/c++/13/mutex
  /usr/include/c++/13/new
+ /usr/include/c++/13/numeric
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
  /usr/include/c++/13/pstl/glue_memory_defs.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stdexcept
  /usr/include/c++/13/stdlib.h
@@ -2313,6 +2497,7 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
  /usr/include/c++/13/system_error
+ /usr/include/c++/13/thread
  /usr/include/c++/13/tr1/bessel_function.tcc
  /usr/include/c++/13/tr1/beta_function.tcc
  /usr/include/c++/13/tr1/ell_integral.tcc
@@ -2332,14 +2517,22 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/c++/13/utility
  /usr/include/c++/13/vector
  /usr/include/ctype.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/libintl.h
  /usr/include/limits.h
+ /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
+ /usr/include/linux/posix_types.h
+ /usr/include/linux/stat.h
+ /usr/include/linux/stddef.h
+ /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/math.h
  /usr/include/pthread.h
@@ -2352,20 +2545,33 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/time.h
+ /usr/include/unistd.h
  /usr/include/wchar.h
  /usr/include/wctype.h
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h
+ /usr/include/x86_64-linux-gnu/asm/types.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
+ /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h
  /usr/include/x86_64-linux-gnu/bits/endian.h
  /usr/include/x86_64-linux-gnu/bits/endianness.h
+ /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -2376,8 +2582,14 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
@@ -2386,6 +2598,9 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/select.h
  /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
+ /usr/include/x86_64-linux-gnu/bits/stat.h
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h
+ /usr/include/x86_64-linux-gnu/bits/statx.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
@@ -2400,6 +2615,7 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
@@ -2422,8 +2638,11 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
@@ -2433,6 +2652,9 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
@@ -2452,19 +2674,25 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
+ /usr/include/x86_64-linux-gnu/sys/stat.h
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
@@ -2582,15 +2810,26 @@ CMakeFiles/face.dir/src/database/FaceDatabase.cc.o
 
 CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/database/OpencvFaceDatabase.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/FaceDatabase.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/OpencvFaceDatabase.h
  /usr/include/alloca.h
+ /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/int-ll64.h
+ /usr/include/asm-generic/posix_types.h
+ /usr/include/asm-generic/types.h
  /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
@@ -2649,6 +2888,8 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -2660,6 +2901,7 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
  /usr/include/c++/13/bits/std_mutex.h
+ /usr/include/c++/13/bits/std_thread.h
  /usr/include/c++/13/bits/stl_algo.h
  /usr/include/c++/13/bits/stl_algobase.h
  /usr/include/c++/13/bits/stl_bvector.h
@@ -2674,6 +2916,7 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/bits/stl_map.h
  /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_multiset.h
+ /usr/include/c++/13/bits/stl_numeric.h
  /usr/include/c++/13/bits/stl_pair.h
  /usr/include/c++/13/bits/stl_queue.h
  /usr/include/c++/13/bits/stl_raw_storage_iter.h
@@ -2683,10 +2926,12 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/stl_uninitialized.h
  /usr/include/c++/13/bits/stl_vector.h
+ /usr/include/c++/13/bits/stream_iterator.h
  /usr/include/c++/13/bits/streambuf.tcc
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/string_view.tcc
  /usr/include/c++/13/bits/stringfwd.h
+ /usr/include/c++/13/bits/this_thread_sleep.h
  /usr/include/c++/13/bits/uniform_int_dist.h
  /usr/include/c++/13/bits/unique_lock.h
  /usr/include/c++/13/bits/unique_ptr.h
@@ -2695,6 +2940,7 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
  /usr/include/c++/13/cfloat
@@ -2730,6 +2976,7 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/iosfwd
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
+ /usr/include/c++/13/iterator
  /usr/include/c++/13/limits
  /usr/include/c++/13/list
  /usr/include/c++/13/locale
@@ -2738,14 +2985,18 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/memory
  /usr/include/c++/13/mutex
  /usr/include/c++/13/new
+ /usr/include/c++/13/numeric
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
  /usr/include/c++/13/pstl/glue_memory_defs.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stdexcept
  /usr/include/c++/13/stdlib.h
@@ -2753,6 +3004,7 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
  /usr/include/c++/13/system_error
+ /usr/include/c++/13/thread
  /usr/include/c++/13/tr1/bessel_function.tcc
  /usr/include/c++/13/tr1/beta_function.tcc
  /usr/include/c++/13/tr1/ell_integral.tcc
@@ -2772,14 +3024,22 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/c++/13/utility
  /usr/include/c++/13/vector
  /usr/include/ctype.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/libintl.h
  /usr/include/limits.h
+ /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
+ /usr/include/linux/posix_types.h
+ /usr/include/linux/stat.h
+ /usr/include/linux/stddef.h
+ /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/math.h
  /usr/include/pthread.h
@@ -2792,20 +3052,33 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/time.h
+ /usr/include/unistd.h
  /usr/include/wchar.h
  /usr/include/wctype.h
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h
+ /usr/include/x86_64-linux-gnu/asm/types.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
+ /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h
  /usr/include/x86_64-linux-gnu/bits/endian.h
  /usr/include/x86_64-linux-gnu/bits/endianness.h
+ /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -2816,8 +3089,14 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
@@ -2826,6 +3105,9 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/select.h
  /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
+ /usr/include/x86_64-linux-gnu/bits/stat.h
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h
+ /usr/include/x86_64-linux-gnu/bits/statx.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
@@ -2840,6 +3122,7 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
@@ -2862,8 +3145,11 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
@@ -2873,6 +3159,9 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
@@ -2892,19 +3181,25 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
+ /usr/include/x86_64-linux-gnu/sys/stat.h
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
@@ -3022,6 +3317,12 @@ CMakeFiles/face.dir/src/database/OpencvFaceDatabase.cc.o
 
 CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/dlib/DlibFaceCoder.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/dlib/DlibFaceCoder.h
  /home/fitz/projects/face/opencv_face_recognition/src/dlib/config.h
@@ -3098,6 +3399,8 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -3150,6 +3453,7 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cassert
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
@@ -3208,8 +3512,10 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stack
  /usr/include/c++/13/stdexcept
@@ -3242,8 +3548,10 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/c++/13/vector
  /usr/include/ctype.h
  /usr/include/dirent.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/gif_lib.h
@@ -3252,6 +3560,7 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/limits.h
  /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
  /usr/include/linux/posix_types.h
  /usr/include/linux/stat.h
@@ -3286,6 +3595,9 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/endianness.h
  /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
@@ -3293,6 +3605,7 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -3303,6 +3616,11 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h
@@ -3354,6 +3672,7 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
@@ -3391,11 +3710,14 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
  /usr/include/x86_64-linux-gnu/sys/stat.h
@@ -4269,6 +4591,12 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o
 
 CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/dlib/DlibRecognizer.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/FaceRecognizer.h
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/FaceDatabase.h
@@ -4348,6 +4676,8 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -4400,6 +4730,7 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cassert
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
@@ -4458,8 +4789,10 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stack
  /usr/include/c++/13/stdexcept
@@ -4492,8 +4825,10 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/c++/13/vector
  /usr/include/ctype.h
  /usr/include/dirent.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/gif_lib.h
@@ -4502,6 +4837,7 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/limits.h
  /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
  /usr/include/linux/posix_types.h
  /usr/include/linux/stat.h
@@ -4537,6 +4873,9 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/endianness.h
  /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
@@ -4544,6 +4883,7 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -4554,6 +4894,11 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h
@@ -4605,6 +4950,7 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
@@ -4642,11 +4988,14 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
  /usr/include/x86_64-linux-gnu/sys/stat.h
@@ -5520,15 +5869,26 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o
 
 CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/opencv/OpencvFaceCoder.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/opencv/OpencvFaceCoder.h
  /home/fitz/projects/face/opencv_face_recognition/src/opencv/config.h
  /usr/include/alloca.h
+ /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/int-ll64.h
+ /usr/include/asm-generic/posix_types.h
+ /usr/include/asm-generic/types.h
  /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
@@ -5587,6 +5947,8 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -5598,6 +5960,7 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
  /usr/include/c++/13/bits/std_mutex.h
+ /usr/include/c++/13/bits/std_thread.h
  /usr/include/c++/13/bits/stl_algo.h
  /usr/include/c++/13/bits/stl_algobase.h
  /usr/include/c++/13/bits/stl_bvector.h
@@ -5612,6 +5975,7 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/bits/stl_map.h
  /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_multiset.h
+ /usr/include/c++/13/bits/stl_numeric.h
  /usr/include/c++/13/bits/stl_pair.h
  /usr/include/c++/13/bits/stl_queue.h
  /usr/include/c++/13/bits/stl_raw_storage_iter.h
@@ -5621,10 +5985,12 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/stl_uninitialized.h
  /usr/include/c++/13/bits/stl_vector.h
+ /usr/include/c++/13/bits/stream_iterator.h
  /usr/include/c++/13/bits/streambuf.tcc
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/string_view.tcc
  /usr/include/c++/13/bits/stringfwd.h
+ /usr/include/c++/13/bits/this_thread_sleep.h
  /usr/include/c++/13/bits/uniform_int_dist.h
  /usr/include/c++/13/bits/unique_lock.h
  /usr/include/c++/13/bits/unique_ptr.h
@@ -5633,6 +5999,7 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
  /usr/include/c++/13/cfloat
@@ -5668,6 +6035,7 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/iosfwd
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
+ /usr/include/c++/13/iterator
  /usr/include/c++/13/limits
  /usr/include/c++/13/list
  /usr/include/c++/13/locale
@@ -5676,14 +6044,18 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/memory
  /usr/include/c++/13/mutex
  /usr/include/c++/13/new
+ /usr/include/c++/13/numeric
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
  /usr/include/c++/13/pstl/glue_memory_defs.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stdexcept
  /usr/include/c++/13/stdlib.h
@@ -5691,6 +6063,7 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
  /usr/include/c++/13/system_error
+ /usr/include/c++/13/thread
  /usr/include/c++/13/tr1/bessel_function.tcc
  /usr/include/c++/13/tr1/beta_function.tcc
  /usr/include/c++/13/tr1/ell_integral.tcc
@@ -5710,14 +6083,22 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/c++/13/utility
  /usr/include/c++/13/vector
  /usr/include/ctype.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/libintl.h
  /usr/include/limits.h
+ /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
+ /usr/include/linux/posix_types.h
+ /usr/include/linux/stat.h
+ /usr/include/linux/stddef.h
+ /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/math.h
  /usr/include/pthread.h
@@ -5729,20 +6110,33 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/time.h
+ /usr/include/unistd.h
  /usr/include/wchar.h
  /usr/include/wctype.h
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h
+ /usr/include/x86_64-linux-gnu/asm/types.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
+ /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h
  /usr/include/x86_64-linux-gnu/bits/endian.h
  /usr/include/x86_64-linux-gnu/bits/endianness.h
+ /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -5753,8 +6147,14 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
@@ -5763,6 +6163,9 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/select.h
  /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
+ /usr/include/x86_64-linux-gnu/bits/stat.h
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h
+ /usr/include/x86_64-linux-gnu/bits/statx.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
@@ -5777,6 +6180,7 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
@@ -5799,8 +6203,11 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
@@ -5810,6 +6217,9 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
@@ -5829,19 +6239,25 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
+ /usr/include/x86_64-linux-gnu/sys/stat.h
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
@@ -5959,6 +6375,12 @@ CMakeFiles/face.dir/src/opencv/OpencvFaceCoder.cc.o
 
 CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/opencv/OpencvRecognizer.cc
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp
  /home/fitz/projects/face/opencv_face_recognition/src/FaceRecognizer.h
  /home/fitz/projects/face/opencv_face_recognition/src/common.h
  /home/fitz/projects/face/opencv_face_recognition/src/database/FaceDatabase.h
@@ -5966,11 +6388,16 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /home/fitz/projects/face/opencv_face_recognition/src/opencv/OpencvRecognizer.h
  /home/fitz/projects/face/opencv_face_recognition/src/opencv/config.h
  /usr/include/alloca.h
+ /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/int-ll64.h
+ /usr/include/asm-generic/posix_types.h
+ /usr/include/asm-generic/types.h
  /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/array
+ /usr/include/c++/13/atomic
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
@@ -6029,6 +6456,8 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
  /usr/include/c++/13/bits/quoted_string.h
+ /usr/include/c++/13/bits/random.h
+ /usr/include/c++/13/bits/random.tcc
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -6040,6 +6469,7 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
  /usr/include/c++/13/bits/std_mutex.h
+ /usr/include/c++/13/bits/std_thread.h
  /usr/include/c++/13/bits/stl_algo.h
  /usr/include/c++/13/bits/stl_algobase.h
  /usr/include/c++/13/bits/stl_bvector.h
@@ -6054,6 +6484,7 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/bits/stl_map.h
  /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_multiset.h
+ /usr/include/c++/13/bits/stl_numeric.h
  /usr/include/c++/13/bits/stl_pair.h
  /usr/include/c++/13/bits/stl_queue.h
  /usr/include/c++/13/bits/stl_raw_storage_iter.h
@@ -6063,10 +6494,12 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/stl_uninitialized.h
  /usr/include/c++/13/bits/stl_vector.h
+ /usr/include/c++/13/bits/stream_iterator.h
  /usr/include/c++/13/bits/streambuf.tcc
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/string_view.tcc
  /usr/include/c++/13/bits/stringfwd.h
+ /usr/include/c++/13/bits/this_thread_sleep.h
  /usr/include/c++/13/bits/uniform_int_dist.h
  /usr/include/c++/13/bits/unique_lock.h
  /usr/include/c++/13/bits/unique_ptr.h
@@ -6075,6 +6508,7 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/bits/uses_allocator_args.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bitset
  /usr/include/c++/13/cctype
  /usr/include/c++/13/cerrno
  /usr/include/c++/13/cfloat
@@ -6110,6 +6544,7 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/iosfwd
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
+ /usr/include/c++/13/iterator
  /usr/include/c++/13/limits
  /usr/include/c++/13/list
  /usr/include/c++/13/locale
@@ -6118,14 +6553,18 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/memory
  /usr/include/c++/13/mutex
  /usr/include/c++/13/new
+ /usr/include/c++/13/numeric
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
  /usr/include/c++/13/pstl/glue_memory_defs.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/queue
+ /usr/include/c++/13/random
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/shared_mutex
  /usr/include/c++/13/sstream
  /usr/include/c++/13/stdexcept
  /usr/include/c++/13/stdlib.h
@@ -6133,6 +6572,7 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
  /usr/include/c++/13/system_error
+ /usr/include/c++/13/thread
  /usr/include/c++/13/tr1/bessel_function.tcc
  /usr/include/c++/13/tr1/beta_function.tcc
  /usr/include/c++/13/tr1/ell_integral.tcc
@@ -6152,14 +6592,22 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/c++/13/utility
  /usr/include/c++/13/vector
  /usr/include/ctype.h
+ /usr/include/elf.h
  /usr/include/endian.h
  /usr/include/errno.h
+ /usr/include/fcntl.h
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/libintl.h
  /usr/include/limits.h
+ /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
+ /usr/include/linux/falloc.h
  /usr/include/linux/limits.h
+ /usr/include/linux/posix_types.h
+ /usr/include/linux/stat.h
+ /usr/include/linux/stddef.h
+ /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/math.h
  /usr/include/pthread.h
@@ -6172,20 +6620,33 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/time.h
+ /usr/include/unistd.h
  /usr/include/wchar.h
  /usr/include/wctype.h
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h
+ /usr/include/x86_64-linux-gnu/asm/types.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
+ /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h
  /usr/include/x86_64-linux-gnu/bits/endian.h
  /usr/include/x86_64-linux-gnu/bits/endianness.h
+ /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -6196,8 +6657,14 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h
+ /usr/include/x86_64-linux-gnu/bits/mman.h
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
@@ -6206,6 +6673,9 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/select.h
  /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
+ /usr/include/x86_64-linux-gnu/bits/stat.h
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h
+ /usr/include/x86_64-linux-gnu/bits/statx.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
@@ -6220,6 +6690,7 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
@@ -6242,8 +6713,11 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
@@ -6253,6 +6727,9 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
@@ -6272,19 +6749,25 @@ CMakeFiles/face.dir/src/opencv/OpencvRecognizer.cc.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/auxv.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/sys/mman.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h
+ /usr/include/x86_64-linux-gnu/sys/stat.h
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h

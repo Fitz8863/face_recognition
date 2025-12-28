@@ -45,6 +45,8 @@ private:
     std::unique_ptr<DlibFaceCoder> facecoder_;       // 人脸编码器实例
 
     // 内存中的人脸库（哈希表）
-    std::unordered_map<std::string, Facedata> facedata_map_;
+    std::unordered_map<int64_t, Facedata> facedata_map_;
+
+    index_dense_t index_;
     double tolerance_ = TOLERANCE; // 欧氏距离阈值
 };

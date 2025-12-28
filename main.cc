@@ -8,7 +8,8 @@ int main(int argc, char const *argv[])
 {
 
     auto recognizer = FaceRecognizer::create(OPENCV);
-    recognizer->registerFace("/home/fitz/projects/face/opencv_face_recognition/data/test_image/hwx.jpg", "hwx");
+    
+    // recognizer->registerFace("/home/fitz/projects/face/opencv_face_recognition/data/test_image/hwx.jpg", "hwx");
 
     // std::string image_dir = "/home/fitz/projects/face/opencv_face_recognition/data/register_face_images";
     // std::vector<std::string> extensions = {".jpg", ".jpeg", ".JPG", ".JPEG"};
@@ -42,6 +43,7 @@ int main(int argc, char const *argv[])
 
     std::cout << "face_count: " << recognizer->getFacedatabaseCount() << " faces." << std::endl;
 
+    // 图片识别人脸
     // std::string input_path = argv[1];
 
     // cv::Mat img = cv::imread(input_path);
@@ -51,7 +53,7 @@ int main(int argc, char const *argv[])
     // cv::imwrite("output.png", img);
 
     
-
+    // 实时摄像头识人脸
     cv::VideoCapture cap(2);
     cv::Mat frame;
     int frame_count = 0;

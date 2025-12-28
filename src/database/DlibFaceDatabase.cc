@@ -4,13 +4,13 @@ DlibFaceDatabase::DlibFaceDatabase(const std::string &db_path) : databastpath_(d
 {
     if (sqlite3_open(this->databastpath_.c_str(), &this->db_) != SQLITE_OK)
     {
-        std::cerr << "无法打开数据库: " << sqlite3_errmsg(this->db_) << std::endl;
+        LOGE("数据库打开失败。");
     }
     else
     {
         if (!init_table())
         {
-            std::cerr << "初始化表结构失败。" << std::endl;
+            LOGE("数据库初始化失败。");
         }
     }
 }
@@ -35,7 +35,7 @@ bool DlibFaceDatabase::init_table()
     char *err_msg = nullptr;
     if (sqlite3_exec(this->db_, sql, nullptr, nullptr, &err_msg) != SQLITE_OK)
     {
-        std::cerr << "❌ 创建表失败: " << err_msg << std::endl;
+        LOGE("❌ 创建表失败: ");
         sqlite3_free(err_msg);
         return false;
     }
@@ -43,7 +43,7 @@ bool DlibFaceDatabase::init_table()
 }
 
 // 查询数据库人脸数量
-int DlibFaceDatabase::get_face_count()
+int64_t DlibFaceDatabase::get_face_count()
 {
     std::lock_guard<std::mutex> lock(this->dbMutex_);
     const char *sql = "SELECT COUNT(*) FROM faces;";
@@ -63,7 +63,7 @@ int DlibFaceDatabase::get_face_count()
 }
 
 // 插入操作
-bool DlibFaceDatabase::insert(const Facedata &face, const std::string &img_path)
+int64_t DlibFaceDatabase::insert(const Facedata &face, const std::string &img_path)
 {
     std::lock_guard<std::mutex> lock(this->dbMutex_);
 
@@ -82,10 +82,19 @@ bool DlibFaceDatabase::insert(const Facedata &face, const std::string &img_path)
     int dataSize = face.embedding.size() * sizeof(float);
     sqlite3_bind_blob(stmt, 3, face.embedding.data(), dataSize, SQLITE_STATIC);
 
-    bool success = (sqlite3_step(stmt) == SQLITE_DONE);
+    int64_t row_id = -1;
+
+    if (sqlite3_step(stmt) == SQLITE_DONE)
+    {
+        row_id = sqlite3_last_insert_rowid(this->db_);
+    }
+    else
+    {
+        LOGE("插入失败: " << sqlite3_errmsg(this->db_));
+    }
     sqlite3_finalize(stmt);
 
-    return success;
+    return row_id;
 }
 
 std::vector<Facedata> DlibFaceDatabase::load_all_faces()
@@ -201,21 +210,23 @@ std::vector<Facedata> DlibFaceDatabase::find_by_id(int id)
     return results;
 }
 
-bool DlibFaceDatabase::delete_by_name(const std::string &name)
+int64_t DlibFaceDatabase::delete_by_name(const std::string &name)
 {
     std::lock_guard<std::mutex> lock(this->dbMutex_);
-    const char *sql = "DELETE FROM faces WHERE user_name = ?;";
-    sqlite3_stmt *stmt;
-    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
-        return false;
-    sqlite3_bind_text(stmt, 1, name.c_str(), -1, SQLITE_STATIC);
-    bool success = (sqlite3_step(stmt) == SQLITE_DONE);
-    sqlite3_finalize(stmt);
-
-    return success;
+    int64_t id = -1;
+    std::vector<Facedata> faces = find_by_name(name);
+    if (!faces.empty())
+    {
+        id = delete_by_id(faces[0].id);
+    }
+    else
+    {
+        LOGW("delete_by_name: no face found for name: " << name);
+    }
+    return id;
 }
 
-bool DlibFaceDatabase::delete_by_id(int id)
+int64_t DlibFaceDatabase::delete_by_id(int id)
 {
     std::lock_guard<std::mutex> lock(this->dbMutex_);
     const char *sql = "DELETE FROM faces WHERE id = ?;";
@@ -223,8 +234,17 @@ bool DlibFaceDatabase::delete_by_id(int id)
     if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
         return false;
     sqlite3_bind_int(stmt, 1, id);
-    bool success = (sqlite3_step(stmt) == SQLITE_DONE);
+
+    int64_t result_id = -1;
+    if (sqlite3_step(stmt) == SQLITE_DONE)
+    {
+        result_id = static_cast<int64_t>(id);
+    }
+    else
+    {
+        LOGE("删除失败");
+    };
     sqlite3_finalize(stmt);
 
-    return success;
+    return result_id;
 }

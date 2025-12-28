@@ -1474,4 +1474,27 @@ CMakeFiles/face.dir/src/dlib/DlibFaceCoder.cc.o: \
  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
- /usr/local/include/opencv4/opencv2/video/background_segm.hpp
+ /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
+ /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h /usr/include/c++/13/bitset \
+ /usr/include/c++/13/random /usr/include/c++/13/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
+ /usr/include/c++/13/bits/random.tcc \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp \
+ /usr/include/x86_64-linux-gnu/sys/auxv.h /usr/include/elf.h \
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp \
+ /usr/include/c++/13/shared_mutex

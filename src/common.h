@@ -1,11 +1,16 @@
 #pragma once
 #include <opencv2/opencv.hpp>
+#include <usearch/index.hpp>
+#include <usearch/index_plugins.hpp>
+#include <usearch/index_dense.hpp>
 
 #include <iostream>
 #include <string.h>
 #include <memory>
 #include <string>
 #include <vector>
+
+using namespace unum::usearch;
 
 #define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
 

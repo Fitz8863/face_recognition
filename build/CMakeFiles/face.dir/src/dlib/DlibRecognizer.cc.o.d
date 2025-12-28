@@ -380,6 +380,61 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o: \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
+ /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
+ /usr/include/x86_64-linux-gnu/bits/mman_ext.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
+ /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h /usr/include/c++/13/atomic \
+ /usr/include/c++/13/bitset /usr/include/c++/13/iterator \
+ /usr/include/c++/13/bits/stream_iterator.h /usr/include/c++/13/random \
+ /usr/include/c++/13/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h \
+ /usr/include/c++/13/bits/random.tcc /usr/include/c++/13/numeric \
+ /usr/include/c++/13/bits/stl_numeric.h \
+ /usr/include/c++/13/pstl/glue_numeric_defs.h /usr/include/c++/13/thread \
+ /usr/include/c++/13/bits/std_thread.h \
+ /usr/include/c++/13/bits/this_thread_sleep.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_plugins.hpp \
+ /usr/include/x86_64-linux-gnu/sys/auxv.h /usr/include/elf.h \
+ /usr/include/x86_64-linux-gnu/bits/hwcap.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/fp16.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/bitcasts.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/fp16/macros.h \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index_dense.hpp \
+ /home/fitz/projects/face/opencv_face_recognition/include/usearch/index.hpp \
+ /usr/include/c++/13/shared_mutex \
  /home/fitz/projects/face/opencv_face_recognition/src/FaceRecognizer.h \
  /home/fitz/projects/face/opencv_face_recognition/src/dlib/DlibFaceCoder.h \
  /home/fitz/projects/face/opencv_face_recognition/src/dlib/config.h \
@@ -399,7 +454,6 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o: \
  /usr/local/include/dlib/type_traits.h /usr/local/include/dlib/is_kind.h \
  /usr/local/include/dlib/matrix/matrix_fwd.h \
  /usr/local/include/dlib/matrix/matrix_exp_abstract.h \
- /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
  /usr/local/include/dlib/matrix/matrix_abstract.h \
  /usr/local/include/dlib/serialize.h /usr/local/include/dlib/algs.h \
  /usr/include/c++/13/fstream \
@@ -638,8 +692,6 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o: \
  /usr/local/include/dlib/threads/thread_function_extension_abstract.h \
  /usr/local/include/dlib/threads/threaded_object_extension.h \
  /usr/local/include/dlib/threads/thread_pool_extension.h \
- /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
- /usr/include/c++/13/bits/this_thread_sleep.h \
  /usr/local/include/dlib/threads/thread_pool_extension_abstract.h \
  /usr/local/include/dlib/threads/multithreaded_object_extension.h \
  /usr/local/include/dlib/bound_function_pointer.h \
@@ -656,7 +708,7 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o: \
  /usr/local/include/dlib/threads/async.h \
  /usr/local/include/dlib/threads/async_abstract.h \
  /usr/include/c++/13/future /usr/include/c++/13/condition_variable \
- /usr/include/c++/13/bits/atomic_futex.h /usr/include/c++/13/atomic \
+ /usr/include/c++/13/bits/atomic_futex.h \
  /usr/local/include/dlib/threads/async.h \
  /usr/local/include/dlib/matrix/symmetric_matrix_cache.h \
  /usr/local/include/dlib/matrix/symmetric_matrix_cache_abstract.h \
@@ -676,11 +728,9 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o: \
  /usr/local/include/dlib/numeric_constants.h \
  /usr/local/include/dlib/assert.h /usr/local/include/dlib/math/windows.h \
  /usr/local/include/dlib/math/bessel.h /usr/local/include/dlib/fft/fft.h \
- /usr/local/include/dlib/fft/fft_size.h /usr/include/c++/13/numeric \
- /usr/include/c++/13/bits/stl_numeric.h \
- /usr/include/c++/13/pstl/glue_numeric_defs.h \
- /usr/local/include/dlib/assert.h /usr/local/include/dlib/hash.h \
- /usr/local/include/dlib/fft/fft_stl.h /usr/local/include/dlib/fft/fft.h \
+ /usr/local/include/dlib/fft/fft_size.h /usr/local/include/dlib/assert.h \
+ /usr/local/include/dlib/hash.h /usr/local/include/dlib/fft/fft_stl.h \
+ /usr/local/include/dlib/fft/fft.h \
  /usr/local/include/dlib/matrix/matrix_read_from_istream.h \
  /usr/local/include/dlib/matrix/matrix_fft.h \
  /usr/local/include/dlib/matrix/matrix_generic_image.h \
@@ -727,8 +777,6 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o: \
  /usr/local/include/dlib/geometry/rectangle.h \
  /usr/local/include/dlib/simd.h /usr/local/include/dlib/simd/simd4f.h \
  /usr/local/include/dlib/simd/simd_check.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h \
@@ -1284,30 +1332,6 @@ CMakeFiles/face.dir/src/dlib/DlibRecognizer.cc.o: \
  /usr/local/include/dlib/uintn.h /usr/local/include/dlib/algs.h \
  /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h /usr/include/libgen.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- /usr/include/x86_64-linux-gnu/sys/stat.h \
- /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
- /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
- /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
- /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
- /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
- /usr/include/asm-generic/posix_types.h \
- /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
  /usr/local/include/dlib/stl_checked.h \
  /usr/local/include/dlib/enable_if.h /usr/local/include/dlib/queue.h \
  /usr/local/include/dlib/dir_nav/dir_nav_extensions.h \

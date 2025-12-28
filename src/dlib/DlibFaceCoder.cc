@@ -136,7 +136,6 @@ std::vector<Facedata> DlibFaceCoder::get_facedatas(const cv::Mat& cv_img)
     auto shapes = this->detect_faces(dlib_img);
 
     // 2. 为每张人脸提取编码
-    static int face_id = 0;
     for (const auto& shape : shapes)
     {
         // 裁剪并标准化人脸 (150x150, 适当填充)
@@ -152,7 +151,7 @@ std::vector<Facedata> DlibFaceCoder::get_facedatas(const cv::Mat& cv_img)
 
         // 构建 Facedata 结构体
         Facedata fd;
-        fd.id = face_id++;
+        fd.id = -1;
         fd.name = "unknown";
         fd.x = rect.left();
         fd.y = rect.top();

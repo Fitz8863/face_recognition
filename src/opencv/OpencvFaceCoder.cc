@@ -105,7 +105,7 @@ std::vector<Facedata> OpencvFaceCoder::get_facedatas(const cv::Mat& image)
             recognizer_->alignCrop(preprocessedImage, faces.row(i), alignedFace);
             recognizer_->feature(alignedFace, feature);
             Facedata facedata;
-            facedata.id = i;
+            facedata.id = -1;
             // 调整坐标到原始图像尺度
             facedata.x = static_cast<int>(faces.at<float>(i, 0) / this->scale_);
             facedata.y = static_cast<int>(faces.at<float>(i, 1) / this->scale_);

@@ -10,11 +10,11 @@ std::unique_ptr<FaceDatabase> FaceDatabase::create(const std::string& db_path,Ty
     {
     case Type::OPENCV:
         facedatabase = std::make_unique<OpencvFaceDatabase>(db_path);
-        // LOGI("Using OpenCV FaceDatabase");
+        LOGI("Using OpenCV FaceDatabase");
         break;
     case Type::DLIB:
         facedatabase = std::make_unique<DlibFaceDatabase>(db_path);
-        // LOGI("Using Dlib FaceDatabase");
+        LOGI("Using Dlib FaceDatabase");
         break;
     default:
         return nullptr;

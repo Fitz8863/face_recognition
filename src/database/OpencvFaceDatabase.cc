@@ -1,33 +1,40 @@
 #include "OpencvFaceDatabase.h"
 
-
-OpencvFaceDatabase::OpencvFaceDatabase(const std::string& db_path) : databastpath_(db_path), db_(nullptr) {
-    if (sqlite3_open(this->databastpath_.c_str(), &this->db_) != SQLITE_OK) {
+OpencvFaceDatabase::OpencvFaceDatabase(const std::string &db_path) : databastpath_(db_path), db_(nullptr)
+{
+    if (sqlite3_open(this->databastpath_.c_str(), &this->db_) != SQLITE_OK)
+    {
         LOGE("无法打开数据库: " << sqlite3_errmsg(this->db_));
     }
-    else {
-        if (!init_table()) {
+    else
+    {
+        if (!init_table())
+        {
             LOGE("初始化表结构失败。");
         }
     }
 }
 
-OpencvFaceDatabase::~OpencvFaceDatabase() {
-    if (this->db_) sqlite3_close(this->db_);
+OpencvFaceDatabase::~OpencvFaceDatabase()
+{
+    if (this->db_)
+        sqlite3_close(this->db_);
 }
 
 // 初始化表结构
-bool OpencvFaceDatabase::init_table() {
+bool OpencvFaceDatabase::init_table()
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
-    const char* sql = "CREATE TABLE IF NOT EXISTS opencv_faces ("
-        "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-        "user_name TEXT NOT NULL,"
-        "img_path TEXT NOT NULL,"
-        "face_encoding BLOB NOT NULL,"
-        "created_time DATETIME DEFAULT CUR);";
+    const char *sql = "CREATE TABLE IF NOT EXISTS opencv_faces ("
+                      "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                      "user_name TEXT NOT NULL,"
+                      "img_path TEXT NOT NULL,"
+                      "face_encoding BLOB NOT NULL,"
+                      "created_time DATETIME DEFAULT CUR);";
 
-    char* err_msg = nullptr;
-    if (sqlite3_exec(this->db_, sql, nullptr, nullptr, &err_msg) != SQLITE_OK) {
+    char *err_msg = nullptr;
+    if (sqlite3_exec(this->db_, sql, nullptr, nullptr, &err_msg) != SQLITE_OK)
+    {
         LOGE("创建表失败: " << err_msg);
         sqlite3_free(err_msg);
         return false;
@@ -36,16 +43,19 @@ bool OpencvFaceDatabase::init_table() {
 }
 
 // 查询数据库人脸数量
-int OpencvFaceDatabase::get_face_count() {
+int64_t OpencvFaceDatabase::get_face_count()
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
-    const char* sql = "SELECT COUNT(*) FROM opencv_faces;";
-    sqlite3_stmt* stmt;
-    int count = 0;
+    const char *sql = "SELECT COUNT(*) FROM opencv_faces;";
+    sqlite3_stmt *stmt;
+    int64_t count = 0;
 
-    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return count;
+    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
+        return count;
 
-    if (sqlite3_step(stmt) == SQLITE_ROW) {
-        count = sqlite3_column_int(stmt, 0);
+    if (sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        count = sqlite3_column_int64(stmt, 0);
     }
 
     sqlite3_finalize(stmt);
@@ -53,14 +63,16 @@ int OpencvFaceDatabase::get_face_count() {
 }
 
 // 插入操作
-bool OpencvFaceDatabase::insert(const Facedata& face, const std::string& img_path) {
+int64_t OpencvFaceDatabase::insert(const Facedata &face, const std::string &img_path)
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
-    if (face.embedding.empty()) {
+    if (face.embedding.empty())
+    {
         LOGE("特征向量为空，拒绝插入数据库");
         return false;
     }
-    const char* sql = "INSERT INTO opencv_faces (user_name, img_path ,face_encoding) VALUES (?,?,?);";
-    sqlite3_stmt* stmt;
+    const char *sql = "INSERT INTO opencv_faces (user_name, img_path ,face_encoding) VALUES (?,?,?);";
+    sqlite3_stmt *stmt;
 
     if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
         return false;
@@ -75,38 +87,48 @@ bool OpencvFaceDatabase::insert(const Facedata& face, const std::string& img_pat
     // face.encoding(0,0) 获取第一个元素的指针，128 * sizeof(float) 是总字节数 (512字节)
     sqlite3_bind_blob(stmt, 3, face.embedding.data(), dataSize, SQLITE_STATIC);
 
-    bool success = (sqlite3_step(stmt) == SQLITE_DONE);
-    if (!success) {
+    int64_t row_id = -1;
+
+    if (sqlite3_step(stmt) == SQLITE_DONE)
+    {
+        row_id = sqlite3_last_insert_rowid(this->db_);
+    }
+    else
+    {
         LOGE("插入失败: " << sqlite3_errmsg(this->db_));
     }
     sqlite3_finalize(stmt);
 
-    return success;
+    return row_id;
 }
 
-std::vector<Facedata> OpencvFaceDatabase::load_all_faces() {
+std::vector<Facedata> OpencvFaceDatabase::load_all_faces()
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
     std::vector<Facedata> results;
-    const char* sql = "SELECT * FROM opencv_faces;";
-    sqlite3_stmt* stmt;
+    const char *sql = "SELECT * FROM opencv_faces;";
+    sqlite3_stmt *stmt;
 
-    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return results;
+    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
+        return results;
 
-    while (sqlite3_step(stmt) == SQLITE_ROW) {
+    while (sqlite3_step(stmt) == SQLITE_ROW)
+    {
         Facedata fd;
         fd.id = sqlite3_column_int(stmt, 0);
-        fd.name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        fd.name = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1));
 
         // 从 BLOB 读取并恢复 matrix
-        const void* blobPtr = sqlite3_column_blob(stmt, 3);
+        const void *blobPtr = sqlite3_column_blob(stmt, 3);
         int totalBytes = sqlite3_column_bytes(stmt, 3);
 
-        if (blobPtr != nullptr && totalBytes > 0) {
+        if (blobPtr != nullptr && totalBytes > 0)
+        {
             // 计算 float 的个数
             int elementCount = totalBytes / sizeof(float);
 
             // 将二进制数据还原为 vector<float>
-            float* floatPtr = (float*)blobPtr;
+            float *floatPtr = (float *)blobPtr;
             fd.embedding.assign(floatPtr, floatPtr + elementCount);
             results.push_back(fd);
         }
@@ -116,31 +138,35 @@ std::vector<Facedata> OpencvFaceDatabase::load_all_faces() {
     return results;
 }
 
-std::vector<Facedata> OpencvFaceDatabase::find_by_name(const std::string& name) {
+std::vector<Facedata> OpencvFaceDatabase::find_by_name(const std::string &name)
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
-    std::vector<Facedata>   results;
-    const char* sql = "SELECT * FROM opencv_faces WHERE user_name = ?;";
-    sqlite3_stmt* stmt;
+    std::vector<Facedata> results;
+    const char *sql = "SELECT * FROM opencv_faces WHERE user_name = ?;";
+    sqlite3_stmt *stmt;
 
-    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return results;
+    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
+        return results;
 
     sqlite3_bind_text(stmt, 1, name.c_str(), -1, SQLITE_STATIC);
 
-    while (sqlite3_step(stmt) == SQLITE_ROW) {
+    while (sqlite3_step(stmt) == SQLITE_ROW)
+    {
         Facedata fd;
         fd.id = sqlite3_column_int(stmt, 0);
-        fd.name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        fd.name = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1));
 
         // 从 BLOB 读取并恢复 matrix
-        const void* blobPtr = sqlite3_column_blob(stmt, 3);
+        const void *blobPtr = sqlite3_column_blob(stmt, 3);
         int totalBytes = sqlite3_column_bytes(stmt, 3);
 
-        if (blobPtr != nullptr && totalBytes > 0) {
+        if (blobPtr != nullptr && totalBytes > 0)
+        {
             // 计算 float 的个数
             int elementCount = totalBytes / sizeof(float);
 
             // 将二进制数据还原为 vector<float>
-            float* floatPtr = (float*)blobPtr;
+            float *floatPtr = (float *)blobPtr;
             fd.embedding.assign(floatPtr, floatPtr + elementCount);
             results.push_back(fd);
         }
@@ -149,35 +175,37 @@ std::vector<Facedata> OpencvFaceDatabase::find_by_name(const std::string& name) 
     sqlite3_finalize(stmt);
     return results;
 }
-
-
 
 // 数据库通过id号查找人脸数据
-std::vector<Facedata> OpencvFaceDatabase::find_by_id(int id) {
+std::vector<Facedata> OpencvFaceDatabase::find_by_id(int id)
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
     std::vector<Facedata> results;
-    const char* sql = "SELECT id, user_name,img_path ,face_encoding FROM opencv_faces WHERE id = ?;";
-    sqlite3_stmt* stmt;
+    const char *sql = "SELECT id, user_name,img_path ,face_encoding FROM opencv_faces WHERE id = ?;";
+    sqlite3_stmt *stmt;
 
-    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return results;
+    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
+        return results;
 
     sqlite3_bind_int(stmt, 1, id);
 
-    while (sqlite3_step(stmt) == SQLITE_ROW) {
+    while (sqlite3_step(stmt) == SQLITE_ROW)
+    {
         Facedata fd;
         fd.id = sqlite3_column_int(stmt, 0);
-        fd.name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        fd.name = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1));
 
         // 从 BLOB 读取并恢复 matrix
-        const void* blobPtr = sqlite3_column_blob(stmt, 3);
+        const void *blobPtr = sqlite3_column_blob(stmt, 3);
         int totalBytes = sqlite3_column_bytes(stmt, 3);
 
-        if (blobPtr != nullptr && totalBytes > 0) {
+        if (blobPtr != nullptr && totalBytes > 0)
+        {
             // 计算 float 的个数
             int elementCount = totalBytes / sizeof(float);
 
             // 将二进制数据还原为 vector<float>
-            float* floatPtr = (float*)blobPtr;
+            float *floatPtr = (float *)blobPtr;
             fd.embedding.assign(floatPtr, floatPtr + elementCount);
             results.push_back(fd);
         }
@@ -187,28 +215,42 @@ std::vector<Facedata> OpencvFaceDatabase::find_by_id(int id) {
     return results;
 }
 
-
-
-bool OpencvFaceDatabase::delete_by_name(const std::string& name) {
+int64_t OpencvFaceDatabase::delete_by_name(const std::string &name)
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
-    const char* sql = "DELETE FROM opencv_faces WHERE user_name = ?;";
-    sqlite3_stmt* stmt;
-    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return false;
-    sqlite3_bind_text(stmt, 1, name.c_str(), -1, SQLITE_STATIC);
-    bool success = (sqlite3_step(stmt) == SQLITE_DONE);
-    sqlite3_finalize(stmt);
-
-    return success;
+    int64_t id = -1;
+    std::vector<Facedata> faces = find_by_name(name);
+    if (!faces.empty())
+    {
+        id = delete_by_id(faces[0].id);
+    }
+    else
+    {
+        LOGW("delete_by_name: no face found for name: " << name);
+    }
+    return id;
 }
 
-bool OpencvFaceDatabase::delete_by_id(int id) {
+int64_t OpencvFaceDatabase::delete_by_id(int id)
+{
     std::lock_guard<std::mutex> lock(this->dbMutex_);
-    const char* sql = "DELETE FROM opencv_faces WHERE id = ?;";
-    sqlite3_stmt* stmt;
-    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return false;
+    const char *sql = "DELETE FROM opencv_faces WHERE id = ?;";
+    sqlite3_stmt *stmt;
+    if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK)
+        return false;
     sqlite3_bind_int(stmt, 1, id);
-    bool success = (sqlite3_step(stmt) == SQLITE_DONE);
+
+    int64_t result_id = -1;
+    if (sqlite3_step(stmt) == SQLITE_DONE)
+    {
+        result_id = static_cast<int64_t>(id);
+    }
+    else
+    {
+        LOGE("删除失败");
+    }
+
     sqlite3_finalize(stmt);
 
-    return success;
+    return result_id;
 }

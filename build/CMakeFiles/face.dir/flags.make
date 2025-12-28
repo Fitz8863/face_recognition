@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/fitz/projects/face/opencv_face_recognition/src -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/fitz/projects/face/opencv_face_recognition/src -I/home/fitz/projects/face/opencv_face_recognition/include -isystem /usr/local/include/opencv4
 
 CXX_FLAGS = -O2 -I/usr/include/x86_64-linux-gnu -mavx -Wreturn-type
 
