@@ -36,4 +36,5 @@ public:
 private:
     sqlite3* db_;
     std::string databastpath_;
+    mutable std::mutex dbMutex_;
 };

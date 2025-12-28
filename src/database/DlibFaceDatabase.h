@@ -1,24 +1,25 @@
 #pragma once
 #include <sqlite3.h>
 #include "common.h"
-#include "FaceDatabase.h"  
+#include "FaceDatabase.h"
 
-class DlibFaceDatabase : public FaceDatabase {
+class DlibFaceDatabase : public FaceDatabase
+{
 public:
-    DlibFaceDatabase(const std::string& db_path);
+    DlibFaceDatabase(const std::string &db_path);
     ~DlibFaceDatabase();
 
     // 初始化表结构
     bool init_table() override;
 
     // 存储人脸数据
-    bool insert(const Facedata& face, const std::string& img_path) override;
+    bool insert(const Facedata &face, const std::string &img_path) override;
 
     // 查询数据库人脸数量
     int get_face_count() override;
 
     // 根据名称查找人脸数据
-    std::vector<Facedata> find_by_name(const std::string& name) override;
+    std::vector<Facedata> find_by_name(const std::string &name) override;
 
     // 根据ID查找人脸数据
     std::vector<Facedata> find_by_id(int id) override;
@@ -27,13 +28,13 @@ public:
     std::vector<Facedata> load_all_faces() override;
 
     // 根据名称删除人脸数据
-    bool delete_by_name(const std::string& name)  override;
+    bool delete_by_name(const std::string &name) override;
 
     // 根据ID删除人脸数据
     bool delete_by_id(int id) override;
 
 private:
-    sqlite3* db_;
+    sqlite3 *db_;
     std::string databastpath_;
-
+    mutable std::mutex dbMutex_;
 };

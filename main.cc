@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 {
 
     auto recognizer = FaceRecognizer::create(OPENCV);
-    // recognizer->registerFace(image_path, "hwj");
+    recognizer->registerFace("/home/fitz/projects/face/opencv_face_recognition/data/test_image/hwx.jpg", "hwx");
 
     // std::string image_dir = "/home/fitz/projects/face/opencv_face_recognition/data/register_face_images";
     // std::vector<std::string> extensions = {".jpg", ".jpeg", ".JPG", ".JPEG"};
@@ -52,7 +52,7 @@ int main(int argc, char const *argv[])
 
     
 
-    cv::VideoCapture cap(0);
+    cv::VideoCapture cap(2);
     cv::Mat frame;
     int frame_count = 0;
     auto start_time = std::chrono::steady_clock::now();

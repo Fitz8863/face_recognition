@@ -18,7 +18,7 @@ OpencvFaceDatabase::~OpencvFaceDatabase() {
 
 // 初始化表结构
 bool OpencvFaceDatabase::init_table() {
-
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     const char* sql = "CREATE TABLE IF NOT EXISTS opencv_faces ("
         "id INTEGER PRIMARY KEY AUTOINCREMENT,"
         "user_name TEXT NOT NULL,"
@@ -37,6 +37,7 @@ bool OpencvFaceDatabase::init_table() {
 
 // 查询数据库人脸数量
 int OpencvFaceDatabase::get_face_count() {
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     const char* sql = "SELECT COUNT(*) FROM opencv_faces;";
     sqlite3_stmt* stmt;
     int count = 0;
@@ -53,6 +54,7 @@ int OpencvFaceDatabase::get_face_count() {
 
 // 插入操作
 bool OpencvFaceDatabase::insert(const Facedata& face, const std::string& img_path) {
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     if (face.embedding.empty()) {
         LOGE("特征向量为空，拒绝插入数据库");
         return false;
@@ -83,6 +85,7 @@ bool OpencvFaceDatabase::insert(const Facedata& face, const std::string& img_pat
 }
 
 std::vector<Facedata> OpencvFaceDatabase::load_all_faces() {
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     std::vector<Facedata> results;
     const char* sql = "SELECT * FROM opencv_faces;";
     sqlite3_stmt* stmt;
@@ -114,6 +117,7 @@ std::vector<Facedata> OpencvFaceDatabase::load_all_faces() {
 }
 
 std::vector<Facedata> OpencvFaceDatabase::find_by_name(const std::string& name) {
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     std::vector<Facedata>   results;
     const char* sql = "SELECT * FROM opencv_faces WHERE user_name = ?;";
     sqlite3_stmt* stmt;
@@ -150,6 +154,7 @@ std::vector<Facedata> OpencvFaceDatabase::find_by_name(const std::string& name) 
 
 // 数据库通过id号查找人脸数据
 std::vector<Facedata> OpencvFaceDatabase::find_by_id(int id) {
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     std::vector<Facedata> results;
     const char* sql = "SELECT id, user_name,img_path ,face_encoding FROM opencv_faces WHERE id = ?;";
     sqlite3_stmt* stmt;
@@ -185,6 +190,7 @@ std::vector<Facedata> OpencvFaceDatabase::find_by_id(int id) {
 
 
 bool OpencvFaceDatabase::delete_by_name(const std::string& name) {
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     const char* sql = "DELETE FROM opencv_faces WHERE user_name = ?;";
     sqlite3_stmt* stmt;
     if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return false;
@@ -196,6 +202,7 @@ bool OpencvFaceDatabase::delete_by_name(const std::string& name) {
 }
 
 bool OpencvFaceDatabase::delete_by_id(int id) {
+    std::lock_guard<std::mutex> lock(this->dbMutex_);
     const char* sql = "DELETE FROM opencv_faces WHERE id = ?;";
     sqlite3_stmt* stmt;
     if (sqlite3_prepare_v2(this->db_, sql, -1, &stmt, nullptr) != SQLITE_OK) return false;
