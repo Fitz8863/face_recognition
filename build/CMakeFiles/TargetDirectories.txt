@@ -1,3 +1,0 @@
-/home/fitz/projects/face/opencv_face_recognition/build/CMakeFiles/face.dir
-/home/fitz/projects/face/opencv_face_recognition/build/CMakeFiles/edit_cache.dir
-/home/fitz/projects/face/opencv_face_recognition/build/CMakeFiles/rebuild_cache.dir

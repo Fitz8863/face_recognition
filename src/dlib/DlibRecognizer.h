@@ -1,6 +1,5 @@
 #pragma once
 #include "database/FaceDatabase.h"
-#include "FaceRecognizer.h"
 #include "DlibFaceCoder.h"
 #include <unordered_map>
 

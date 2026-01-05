@@ -118,7 +118,7 @@ bool OpencvRecognizer::registerFace(const cv::Mat &image, const std::string &nam
     }
 
     // 提取人脸特征
-    std::vector<Facedata> newFaces = facecoder_->get_facedatas(image);
+    std::vector<Facedata> newFaces = facecoder_->get_facedatas(image);  
     if (newFaces.empty())
     {
         LOGE("未检测到人脸，注册失败");
@@ -173,22 +173,24 @@ std::vector<Facedata> OpencvRecognizer::recognizeFace(const cv::Mat &faceImage)
     // 当前人脸查找方式（使用向量索引查找）
     for (auto &queryFace : queryFaces)
     {
+        if (this->index_.size() <= 0)
+        {
+            return queryFaces;
+        }
         auto results = this->index_.search(queryFace.embedding.data(), 3);
 
         for (size_t i = 0; i < results.size(); ++i)
         {
             uint64_t found_id = results[i].member.key; // 之前 add 进去的 ID
-            float distance = results[i].distance;      // 余弦距离
+            float distance = results[i].distance;      // 余弦距离  注意：余弦距离(Distance) = 1 - 余弦相似度(Similarity)，距离越小（接近0），代表越相似
 
-            // 注意：余弦距离(Distance) = 1 - 余弦相似度(Similarity)
-            // 距离越小（接近0），代表越相似
-            if (distance <= 1 - this->threshold_)
+            Facedata match = this->facedata_map_[found_id];                          //  获取之前 add 进去的 Facedata
+            double similarity = this->facecoder_->compareFeatures(queryFace, match); //  计算余弦相似度
+            if (similarity >= this->threshold_)
             {
-                Facedata match = this->facedata_map_[found_id];
                 queryFace.id = match.id;
                 queryFace.name = match.name;
                 queryFace.score = distance;
-                // std::cout << "识别成功！姓名: " << match.name << "，距离: " << distance << std::endl;
             }
         }
     }

@@ -1,5 +1,5 @@
 #pragma once
-
+#include <opencv2/opencv.hpp>
 #include <dlib/dnn.h>
 #include <dlib/image_io.h>
 #include <dlib/image_processing.h>
@@ -10,7 +10,14 @@
 #include <iomanip>
 #include <algorithm>
 
+#include "usearch/index.hpp"
+#include "usearch/index_plugins.hpp"
+#include "usearch/index_dense.hpp"
+
 #include "common.h"
+#include "FaceRecognizer.h"
+
+using namespace unum::usearch;
 
 #define MAX_IMAGE_WIDTH 640.0  // 定义图像的最大宽度
 #define MAX_IMAGE_HEIGHT 640.0 // 定义图像的最大高度

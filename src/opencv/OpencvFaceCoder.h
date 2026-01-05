@@ -1,6 +1,7 @@
 #pragma once    
 #include "config.h"
 
+
 class OpencvFaceCoder {
 public:
     OpencvFaceCoder(const std::string& detectorPath,
@@ -39,7 +40,6 @@ private:
     int targetId = TARGET_ID;
 
     double scale_ = 1.0;
-
 
     // 类型转换 , cv::Mat 转 std::vector<float>
     std::vector<float> Mat2Vector(const cv::Mat& mat);

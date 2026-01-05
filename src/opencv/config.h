@@ -1,5 +1,12 @@
 #include "common.h"
+#include <opencv2/opencv.hpp>
+#include "usearch/index.hpp"
+#include "usearch/index_plugins.hpp"
+#include "usearch/index_dense.hpp"
 
+#include "FaceRecognizer.h"
+
+using namespace unum::usearch;
 // -------------------------opencv检测器和识别器路径--------------------------------
 
 #define OPENCV_DETECTOR_PATH "/home/fitz/projects/face/opencv_face_recognition/models/opencv/face_detection_yunet_2023mar.onnx"

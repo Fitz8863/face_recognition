@@ -1,6 +1,8 @@
 #pragma once
-#include "config.h"
 #include <dlib/opencv.h>
+#include "config.h"
+
+
 
 // 人脸编码器类
 class DlibFaceCoder

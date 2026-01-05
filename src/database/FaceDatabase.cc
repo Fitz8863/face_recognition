@@ -1,6 +1,7 @@
 #include "FaceDatabase.h" 
 #include "OpencvFaceDatabase.h"
 #include "DlibFaceDatabase.h"
+#include "InspireFaceDatabase.h"
 
 // 工厂模式
 std::unique_ptr<FaceDatabase> FaceDatabase::create(const std::string& db_path,Type type)
@@ -15,6 +16,10 @@ std::unique_ptr<FaceDatabase> FaceDatabase::create(const std::string& db_path,Ty
     case Type::DLIB:
         facedatabase = std::make_unique<DlibFaceDatabase>(db_path);
         LOGI("Using Dlib FaceDatabase");
+        break;
+    case Type::INSPIREFACE:
+        facedatabase = std::make_unique<InspireFaceDatabase>(db_path);
+        LOGI("Using InspireFace FaceDatabase");
         break;
     default:
         return nullptr;

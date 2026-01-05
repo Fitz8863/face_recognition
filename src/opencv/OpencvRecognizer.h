@@ -1,5 +1,4 @@
 #pragma once
-#include "FaceRecognizer.h"
 #include "database/FaceDatabase.h"
 #include "OpencvFaceCoder.h"
 #include <unordered_map>
@@ -35,7 +34,7 @@ public:
     // 获取当前使用的后端名称（用于日志/调试）
     std::string getBackendName() const override;
 
-    ~OpencvRecognizer() override;
+    ~OpencvRecognizer();
 
 private:
     std::unique_ptr<FaceDatabase> facedatabase_; // 人脸数据库实例

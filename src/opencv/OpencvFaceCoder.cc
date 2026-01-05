@@ -1,5 +1,6 @@
 #include "OpencvFaceCoder.h"
 
+
 OpencvFaceCoder::OpencvFaceCoder(const std::string& detectorPath,
     const std::string& recognizerPath)
 {

@@ -2,19 +2,31 @@
 #include <vector>
 #include <filesystem>
 #include <chrono>
+#include <opencv2/opencv.hpp>
 
 namespace fs = std::filesystem;
 int main(int argc, char const *argv[])
 {
+    std::string backend = argv[1];
+    Type type = INSPIREFACE;
+    if (backend == "dlib")
+    {
+        type = DLIB;
+    }
+    else if (backend == "opencv")
+    {
+        type = OPENCV;
+    }
+    else if (backend == "inspireface")
+    {
+        type = INSPIREFACE;
+    }
 
-    auto recognizer = FaceRecognizer::create(OPENCV);
-    
-    // recognizer->registerFace("/home/fitz/projects/face/opencv_face_recognition/data/test_image/hwx.jpg", "hwx");
+    auto recognizer = FaceRecognizer::create(type);
 
+    // // 遍历目录中的所有文件,批量注册人脸
     // std::string image_dir = "/home/fitz/projects/face/opencv_face_recognition/data/register_face_images";
     // std::vector<std::string> extensions = {".jpg", ".jpeg", ".JPG", ".JPEG"};
-
-    // // 遍历目录中的所有文件
     // for (const auto &entry : fs::directory_iterator(image_dir))
     // {
     //     if (entry.is_regular_file())
@@ -41,18 +53,8 @@ int main(int argc, char const *argv[])
     //     }
     // }
 
-    std::cout << "face_count: " << recognizer->getFacedatabaseCount() << " faces." << std::endl;
+    std::cout << "人脸库人脸的数量: " << recognizer->getFacedatabaseCount() << " faces." << std::endl;
 
-    // 图片识别人脸
-    // std::string input_path = argv[1];
-
-    // cv::Mat img = cv::imread(input_path);
-    // std::vector<Facedata> face = recognizer->recognizeFace(img);
-    // recognizer->drawFaceBoxes(img, face);
-    // std::cout << face[0].name << std::endl;
-    // cv::imwrite("output.png", img);
-
-    
     // 实时摄像头识人脸
     cv::VideoCapture cap(2);
     cv::Mat frame;
@@ -61,10 +63,16 @@ int main(int argc, char const *argv[])
 
     while (cap.read(frame))
     {
+
         std::vector<Facedata> face = recognizer->recognizeFace(frame);
+
+        // auto faceinfo = recognizer->Alivedetect(frame);
+        // if (faceinfo)
+        // {
+        //     std::cout<< faceinfo->attribute.gender << std::endl;
+        // }
+
         recognizer->drawFaceBoxes(frame, face);
-        cv::imshow("frame", frame);
-        cv::waitKey(1);
 
         frame_count++;
         auto current_time = std::chrono::steady_clock::now();
@@ -75,7 +83,9 @@ int main(int argc, char const *argv[])
             frame_count = 0;
             start_time = current_time;
         }
-    }
 
+        cv::imshow("frame", frame);
+        cv::waitKey(1);
+    }
     return 0;
 }

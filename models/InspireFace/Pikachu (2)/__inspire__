@@ -1,0 +1,425 @@
+tag: Pikachu
+version: 4.0
+major: t4.0  # ‘t4.0’ Update emotion predict model
+release: 2025-06-08
+
+# Recommended parameter values based on experience
+similarity_converter:
+  threshold: 0.48
+  middle_score: 0.6
+  steepness: 8.0
+  output_min: 0.01
+  output_max: 1.0
+
+# Face Detection pixel size
+face_detect_pixel_list:
+  - 160
+  - 320
+  - 640
+
+# Face Detection model
+face_detect_model_list:
+  - face_detect_160
+  - face_detect_320
+  - face_detect_640
+
+
+face_detect_160:
+  name: _00_scrfd_500m_bnkps_shape160x160_fp16
+  fullname: _00_scrfd_500m_bnkps_shape160x160_fp16.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: false
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input.1
+  outputs_layers:
+    - score_8
+    - score_16
+    - score_32
+    - bbox_8
+    - bbox_16
+    - bbox_32
+    - kps_8
+    - kps_16
+    - kps_32
+  input_size:
+    - 160
+    - 160
+  mean:
+    - 127.5
+    - 127.5
+    - 127.5
+  norm:
+    - 0.0078125
+    - 0.0078125
+    - 0.0078125
+
+face_detect_320:
+  name: _00_scrfd_500m_bnkps_shape320x320_fp16
+  fullname: _00_scrfd_500m_bnkps_shape320x320_fp16.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: false
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input.1
+  outputs_layers:
+    - score_8
+    - score_16
+    - score_32
+    - bbox_8
+    - bbox_16
+    - bbox_32
+    - kps_8
+    - kps_16
+    - kps_32
+  input_size:
+    - 320
+    - 320
+  mean:
+    - 127.5
+    - 127.5
+    - 127.5
+  norm:
+    - 0.0078125
+    - 0.0078125
+    - 0.0078125
+
+
+face_detect_640:
+  name: _00_scrfd_500m_bnkps_shape640x640_fp16
+  fullname: _00_scrfd_500m_bnkps_shape640x640_fp16.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: false
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input.1
+  outputs_layers:
+    - score_8
+    - score_16
+    - score_32
+    - bbox_8
+    - bbox_16
+    - bbox_32
+    - kps_8
+    - kps_16
+    - kps_32
+  input_size:
+    - 640
+    - 640
+  mean:
+    - 127.5
+    - 127.5
+    - 127.5
+  norm:
+    - 0.0078125
+    - 0.0078125
+    - 0.0078125
+
+landmark:
+  name: _01_hyplmkv2_0.25_112x_fp16
+  fullname: _01_hyplmkv2_0.25_112x_fp16.mnn
+  version: 1.0
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: false
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input
+  outputs_layers:
+    - hyplmkv2
+  input_size:
+    - 112
+    - 112
+  mean:
+    - 0.0
+    - 0.0
+    - 0.0
+  norm:
+    - 0.003921568627
+    - 0.003921568627
+    - 0.003921568627
+
+refine_net:
+  name: _04_refine_net
+  fullname: _04_refine_net.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: true
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: data
+  outputs_layers:
+    - prob1
+    - conv5-2
+  input_size:
+    - 24
+    - 24
+  mean:
+    - 127.5
+    - 127.5
+    - 127.5
+  norm:
+    - 0.0078125
+    - 0.0078125
+    - 0.0078125
+
+pose_quality:
+  name: _07_pose_q_fp16
+  fullname: _07_pose_q_fp16.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: true
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: data
+  outputs_layers:
+    - fc1
+  input_size:
+    - 96
+    - 96
+  mean:
+    - 0.0
+    - 0.0
+    - 0.0
+  norm:
+    - 1.0
+    - 1.0
+    - 1.0
+
+feature:
+  name: _03_extract
+  fullname: _03_extract.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: false
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: data
+  outputs_layers:
+    - fc1_scale
+  input_size:
+    - 112
+    - 112
+  mean:
+    - 127.5
+    - 127.5
+    - 127.5
+  norm:
+    - 0.0078125
+    - 0.0078125
+    - 0.0078125
+
+mask_detect:
+  name: _05_mask
+  fullname: _05_mask.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: true
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input_1
+  outputs_layers:
+    - activation_1/Softmax
+  input_size:
+    - 96
+    - 96
+  mean:
+    - 0.0
+    - 0.0
+    - 0.0
+  norm:
+    - 0.003921568627
+    - 0.003921568627
+    - 0.003921568627
+
+rgb_anti_spoofing:
+  name: _06_msafa27
+  fullname: _06_msafa27.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: true
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: data
+  outputs_layers:
+    - softmax
+  input_size:
+    - 112
+    - 112
+  mean:
+    - 0.0
+    - 0.0
+    - 0.0
+  norm:
+    - 1.0
+    - 1.0
+    - 1.0
+
+face_attribute:
+  name: _08_fairface_fp16
+  fullname: _08_fairface_fp16.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: true
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input.1
+  outputs_layers:
+    - 547
+    - 548
+    - 549
+  input_size:
+    - 112
+    - 112
+  mean:
+    - 103.53
+    - 123.675
+    - 116.28
+  norm:
+    - 0.017429
+    - 0.017507
+    - 0.017124
+
+blink_predict:
+  name: _09_blink_crop
+  fullname: _09_blink_crop.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 1
+  input_image_channel: 1
+  nchw: true
+  swap_color: false
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input
+  outputs_layers:
+    - output
+  input_size:
+    - 64
+    - 64
+  mean:
+    - 0.0
+    - 0.0
+    - 0.0
+  norm:
+    - 0.003921568627
+    - 0.003921568627
+    - 0.003921568627
+
+face_emotion:
+  name: _10_emotion_fp16
+  fullname: _10_emotion_fp16.mnn
+  version: 0.1
+  model_type: MNN
+  infer_engine: MNN
+  infer_device: MNN
+  infer_backend: CPU
+  input_channel: 3
+  input_image_channel: 3
+  nchw: true
+  swap_color: false
+  data_type: image
+  input_tensor_type: float32
+  output_tensor_type: float32
+  threads: 1
+  input_layer: input
+  outputs_layers:
+    - output
+  input_size:
+    - 112
+    - 112
+  mean:
+    - 0.0
+    - 0.0
+    - 0.0
+  norm:
+    - 0.003921568627
+    - 0.003921568627
+    - 0.003921568627

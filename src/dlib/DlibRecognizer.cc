@@ -177,6 +177,10 @@ std::vector<Facedata> DlibRecognizer::recognizeFace(const cv::Mat &faceImage)
     // 当前人脸查找方式（使用向量索引查找）
     for (auto &queryFace : queryFaces)
     {
+        if (this->index_.size() <= 0)
+        {
+            return queryFaces;
+        }
         auto results = this->index_.search(queryFace.embedding.data(), 3);
 
         for (size_t i = 0; i < results.size(); ++i)
