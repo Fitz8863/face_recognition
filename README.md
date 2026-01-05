@@ -94,9 +94,11 @@ lscpu | grep avx
 
 ### InspireFace环境（使用v1.2.3版本）
 
-> 参考：https://github.com/HyperInspire/InspireFace
+> github：https://github.com/HyperInspire/InspireFace
 >
 > SDK的release版本：https://github.com/HyperInspire/InspireFace/releases
+>
+> 相关教程：https://doc.inspireface.online/introduction.html
 
 ### sqlite环境
 
